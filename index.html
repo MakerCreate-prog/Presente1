@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti ❤️</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background: black;
+  color: white;
+  overflow:hidden;
+  text-align:center;
+}
+
+video{
+  position:fixed;
+  right:0;
+  bottom:0;
+  min-width:100%;
+  min-height:100%;
+  z-index:-1;
+  object-fit:cover;
+  filter:brightness(40%);
+}
+
+.carta{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(0,0,0,0.7);
+  padding:40px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  animation:fadeIn 2s ease forwards;
+}
+
+h1{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translate(-50%,-60%);}
+  to{opacity:1; transform:translate(-50%,-50%);}
+}
+
+button{
+  margin-top:20px;
+  padding:10px 20px;
+  border:none;
+  border-radius:30px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+<div class="carta">
+  <h1>Para Mi Amor 💖</h1>
+  <p>
+    Desde que llegaste a mi vida todo es más bonito.
+    Gracias por existir.
+    Esta página es solo una pequeña muestra de lo mucho que te amo.
+  </p>
+  <button onclick="document.getElementById('music').play()">Escucha esto 🎵</button>
+</div>
+
+<audio id="music" src="music.mp3"></audio>
+
+</body>
+</html>
